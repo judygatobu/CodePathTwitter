@@ -83,9 +83,7 @@ class TweetCell: UITableViewCell {
     
     @IBAction func didTapRetweet(_ sender: Any) {
         
-        if (retweetButton.isSelected != true) {
-            
-            retweetButton.isSelected = true
+        if(tweet.retweeted == false){
             tweet.retweeted = true
             tweet.retweetCount += 1
             self.tweetTextLabel.text = String(tweet.retweetCount)
@@ -117,8 +115,11 @@ class TweetCell: UITableViewCell {
         
     }
     
+            
+            
+            
+    
     @IBAction func didTapFavorite(_ sender: Any) {
-        
         if (favoriteButton.isSelected != true) {
             
             favoriteButton.isSelected = true
@@ -141,18 +142,18 @@ class TweetCell: UITableViewCell {
             self.favoritecountLabel.text = String(describing: tweet.favoriteCount)
             
             //APIManager Request from Cell
-            APIManager.shared.favorite(tweet) { (tweet: Tweet?, error: Error?) in
+            APIManager.shared.unfavorite(tweet) { (tweet: Tweet?, error: Error?) in
                 if let  error = error {
-                    print("Error favoriting tweet: \(error.localizedDescription)")
+                    print("Error unfavoriting tweet: \(error.localizedDescription)")
                 } else if let tweet = tweet {
-                    print("Successfully favorited the following Tweet: \n\(tweet.text)")
+                    print("Successfully unfavorited the following Tweet: \n\(tweet.text)")
                 }
             }
         }
         
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
+
+               override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state
