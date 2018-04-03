@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class TweetCell: UITableViewCell {
 
@@ -33,11 +34,13 @@ class TweetCell: UITableViewCell {
     var tweet: Tweet! {
         didSet {
             
-            tweetTextLabel.text = tweet.user.name
+            tweetTextLabel.text = tweet.text
+            
+            usernameLabel.text = tweet.user.name
             
             screenNameLabel.text = "@\(tweet.user.screenName)"
             
-            profileImageView.af_setImage(withURL: URL(string: tweet.user.imageURL)!)
+            profileImageView.af_setImage(withURL:  tweet.user.profileImage!)
             
             timeStampLabel.text = tweet.createdAtString
             
@@ -45,16 +48,16 @@ class TweetCell: UITableViewCell {
             
             if (tweet.retweetCount == 0)
             {
-                tweetTextLabel.text = " "
+                tweet.retweetCount = 0
             } else {
-                tweetTextLabel.text = String(tweet.retweetCount)
+                tweet.retweetCount = tweet.retweetCount
             }
             
             if (tweet.favoriteCount == 0)
             {
                 favoritecountLabel.text = " "
             } else {
-                favoritecountLabel.text = String(describing: tweet.favoriteCount)
+                favoritecountLabel.text = String(describing: tweet.favoriteCount!)
             }
             
             if (tweet.retweeted == true)
@@ -89,6 +92,8 @@ class TweetCell: UITableViewCell {
             self.tweetTextLabel.text = String(tweet.retweetCount)
             
             //APIManager Request from Cell
+            
+           
             APIManager.shared.retweet(tweet) { (tweet: Tweet?, error: Error?) in
                 if let  error = error {
                     print("Error Retweeting tweet: \(error.localizedDescription)")

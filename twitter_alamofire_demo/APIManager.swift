@@ -115,6 +115,7 @@ class APIManager: SessionManager {
                     completion(tweets, nil)
                 }
         }
+    }
     
         // Favorite a Tweet
         func favorite(_ tweet: Tweet, completion: @escaping (Tweet?, Error?) -> ()){
@@ -192,7 +193,7 @@ class APIManager: SessionManager {
     
     
     
-    }
+    
     
     // MARK: TODO: Favorite a Tweet
     
