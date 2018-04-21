@@ -40,7 +40,7 @@ class ComposeViewController: UIViewController {
 
         profileImage.layer.masksToBounds = true;
         profileImage.layer.cornerRadius = 30;
-        profileImage.af_setImage(withURL: URL(string: user.profileImage)!)
+        profileImage.af_setImage(withURL: (string: user.profileImage) as! URL)
 
         
         cancelButton.layer.masksToBounds = true;

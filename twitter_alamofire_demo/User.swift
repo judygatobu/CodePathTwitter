@@ -47,7 +47,7 @@ class User {
         name = dictionary["name"] as! String
         screenName = dictionary["screen_name"] as! String
         profileImage = URL(string: dictionary["profile_image_url_https"] as! String)
-        profileImage = String((image.dropLast(11))) + ".jpg"
+       // profileImage = String((image.dropLast(11))) + ".jpg"
         
         self.dictionary = dictionary;
    
