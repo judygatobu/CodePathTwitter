@@ -75,6 +75,20 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
         APIManager.shared.logout()
     }
     
+    @IBAction func onTapOnComposeButton(_ sender: Any) {
+        
+        
+        self.performSegue(withIdentifier: "ComposeSegue", sender: self)
+    }
     
-   
+    
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ComposeSegue" {
+            
+            let destinationVC = segue.destination as! ComposeViewController
+            
+            
+        }
+    }
+   */
 }

@@ -29,15 +29,16 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     
-    let user = User.currentUser!
+   // let user = User.currentUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        let user = User.currentUser.
+        print(User.currentUser)
         profileImage.layer.masksToBounds = true;
         profileImage.layer.cornerRadius = 30;
-        profileImage.af_setImage(withURL: (string: user.profileImage) as! URL)
+       // profileImage.af_setImage(withURL: (string: user?.profileImage) as! URL)
 
         
         cancelButton.layer.masksToBounds = true;

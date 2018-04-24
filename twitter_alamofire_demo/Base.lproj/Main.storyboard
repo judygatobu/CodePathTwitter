@@ -207,10 +207,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home Timeline" id="9Zi-uW-GTS">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="KbD-WJ-MUD">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="XxB-88-pfj" customClass="tweetButton">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="XxB-88-pfj">
                                 <rect key="frame" x="16" y="7" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="edit-icon"/>
+                                <connections>
+                                    <action selector="onTapOnComposeButton:" destination="5YO-Vh-39k" eventType="touchUpInside" id="T7Y-a1-au9"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="hz2-ji-ft0">
@@ -221,7 +224,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Ctl-bI-Eag" id="igH-cX-XMH"/>
-                        <segue destination="yxU-HW-xje" kind="presentation" id="O0q-zV-wNL"/>
+                        <segue destination="yxU-HW-xje" kind="presentation" identifier="ComposeSegue" id="O0q-zV-wNL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlF-i2-Ves" userLabel="First Responder" sceneMemberID="firstResponder"/>
