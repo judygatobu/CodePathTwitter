@@ -35,9 +35,6 @@ class ComposeViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
-       // profileImageView.af_setImage(withURL:  tweet.user.profileImage!)
-
         profileImage.layer.masksToBounds = true;
         profileImage.layer.cornerRadius = 30;
         profileImage.af_setImage(withURL: (string: user.profileImage) as! URL)
@@ -86,16 +83,20 @@ class ComposeViewController: UIViewController {
             APIManager.shared.composeTweet(with: tweetText.text) { (tweet, error) in
                 if let error = error {
                     print("Error composing Tweet: \(error.localizedDescription)")
-                } else if let tweet = tweet {
+                }
+                else if let tweet = tweet {
                     self.delegate?.did(post: tweet)
+                    
                     print("Compose Tweet Success!")
-                    self.dismiss(animated: true, completion: nil)
+                    
+                    
+                    self.performSegue(withIdentifier: "ComposedToTimeLine", sender: self)
+                    
+                    //self.dismiss(animated: true, completion: nil)
                 }
             }
         }
-
-
-    override func didReceiveMemoryWarning() {
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
