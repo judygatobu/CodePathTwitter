@@ -10,7 +10,7 @@ The following **required** stories are completed:
 - [x] User can sign in using OAuth login flow
 - [x] User can Logout
 - [x] User can view last 20 tweets from their home timeline
-- [x] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
+- [x] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and    timestamp.
 - [x] User can pull to refresh.
 - [x] User can tap the retweet and favorite buttons in a tweet cell to retweet and/or favorite a tweet.
 - [x] User can compose a new tweet by tapping on a compose button.
