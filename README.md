@@ -10,19 +10,19 @@ The following **required** stories are completed:
 - [x] User can sign in using OAuth login flow
 - [x] User can Logout
 - [x] User can view last 20 tweets from their home timeline
--[x]  In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
--[x] User can pull to refresh.
--[x] User can tap the retweet and favorite buttons in a tweet cell to retweet and/or favorite a tweet.
--[x] User can compose a new tweet by tapping on a compose button.
--[x] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation.
--[x] The current signed in user will be persisted across restarts
-
+- [x] In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
+- [x] User can pull to refresh.
+- [x] User can tap the retweet and favorite buttons in a tweet cell to retweet and/or favorite a tweet.
+- [x] User can compose a new tweet by tapping on a compose button.
+- [x] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation.
+- [x] The current signed in user will be persisted across restarts
+ 
 The following **stretch** features are implemented:
 
 - [ ] Profile view includes that user's timeline. (2pts)
 - [ ] User can tap the profile image in any tweet to see another user's profile. (1pt)
-- [x]   Contains the user header view: picture and tagline.
-- [x]   Contains a section with the users basic stats: # tweets, # following, # followers.
+- [x] Contains the user header view: picture and tagline.
+- [x] Contains a section with the users basic stats: # tweets, # following, # followers.
 - [ ] After creating a new tweet, a user should be able to view it in the timeline immediately without refetching the timeline from the network. (1pt)
 - [ ] User can reply to any tweet, and replies should be prefixed with the username and the reply_id should be set when posting the tweet. (2pts)
 - [ ] User sees embedded images in tweet if available. (3pts)
@@ -51,7 +51,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Judy Gatobu]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
