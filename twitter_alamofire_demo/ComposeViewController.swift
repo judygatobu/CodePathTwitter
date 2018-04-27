@@ -14,12 +14,13 @@ protocol ComposeViewControllerDelegate: class {
 }
 
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController,UITextViewDelegate {
 
     
     weak var delegate: ComposeViewControllerDelegate?
     
     
+    @IBOutlet weak var mytweetTextField: UITextView!
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var tweetButton: UIButton!
@@ -34,7 +35,10 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let user = User.currentUser.
+        
+        mytweetTextField.delegate = self 
+        
+     //   let user = User.currentUser.
         print(User.currentUser)
         profileImage.layer.masksToBounds = true;
         profileImage.layer.cornerRadius = 30;
@@ -91,15 +95,25 @@ class ComposeViewController: UIViewController {
                     print("Compose Tweet Success!")
                     
                     
-                    self.performSegue(withIdentifier: "ComposedToTimeLine", sender: self)
+                  //  self.performSegue(withIdentifier: "ComposedToTimeLine", sender: self)
                     
-                    //self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        tweetText.text = textField.text
     }
     
 

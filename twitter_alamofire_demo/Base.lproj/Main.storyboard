@@ -256,7 +256,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What's Happening?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zsg-EE-APZ">
-                                <rect key="frame" x="128" y="65" width="246" height="348"/>
+                                <rect key="frame" x="128" y="65" width="246" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -275,6 +275,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="B4a-8C-BVz" id="ZaS-bX-7I3"/>
+                        <outlet property="mytweetTextField" destination="Zsg-EE-APZ" id="TMZ-QK-K7N"/>
                         <outlet property="profileImage" destination="QS7-74-IoW" id="dWl-kx-VCn"/>
                         <outlet property="tweetButton" destination="9cX-u8-I6y" id="o5Y-2W-txK"/>
                         <outlet property="tweetText" destination="Zsg-EE-APZ" id="vd3-dh-dm6"/>
