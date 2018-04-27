@@ -6,19 +6,23 @@ Time spent: **X** hours spent in total
 
 The following **required** stories are completed:
 
-- [ ] User can tap on a tweet to view it in a detail view, with controls to retweet, favorite, and reply (2pts)
-- [ ] User can compose a new tweet by tapping on a compose button. (3pts)
-- [ ] When composing a tweet, user sees a countdown for the number of characters remaining for the tweet (out of 140) (2pt)
-- [ ] User can view their profile in a *profile tab* (3pts)
-- Contains the user header view: picture and tagline
-- Contains a section with the users basic stats: # tweets, # following, # followers
+- [x] User sees app icon in home screen and styled launch screen
+- [x] User can sign in using OAuth login flow
+- [x] User can Logout
+- [x] User can view last 20 tweets from their home timeline
+-[x]  In the home timeline, user can view tweet with the user profile picture, username, tweet text, and timestamp.
+-[x] User can pull to refresh.
+-[x] User can tap the retweet and favorite buttons in a tweet cell to retweet and/or favorite a tweet.
+-[x] User can compose a new tweet by tapping on a compose button.
+-[x] Using AutoLayout, the Tweet cell should adjust it's layout for iPhone 7, Plus and SE device sizes as well as accommodate device rotation.
+-[x] The current signed in user will be persisted across restarts
 
 The following **stretch** features are implemented:
 
 - [ ] Profile view includes that user's timeline. (2pts)
 - [ ] User can tap the profile image in any tweet to see another user's profile. (1pt)
-- Contains the user header view: picture and tagline.
-- Contains a section with the users basic stats: # tweets, # following, # followers.
+- [x]   Contains the user header view: picture and tagline.
+- [x]   Contains a section with the users basic stats: # tweets, # following, # followers.
 - [ ] After creating a new tweet, a user should be able to view it in the timeline immediately without refetching the timeline from the network. (1pt)
 - [ ] User can reply to any tweet, and replies should be prefixed with the username and the reply_id should be set when posting the tweet. (2pts)
 - [ ] User sees embedded images in tweet if available. (3pts)
@@ -37,7 +41,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://cdn.fbsbx.com/v/t59.2708-21/29756927_10208765302808459_5998734123143790592_n.gif?_nc_cat=0&oh=3585dd69df00d5f6dbe2bfb25540336c&oe=5AC64244' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -47,7 +51,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-Copyright [2018] [Judy Gatobu]
+Copyright [yyyy] [name of copyright owner]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
